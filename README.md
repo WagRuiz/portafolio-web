@@ -220,5 +220,5 @@ internacionales.
 
 ## 🔗 Enlaces
 
-- 🎨 Diseño en Figma: [Enlace al prototipo](#)
+- 🎨 Diseño en Figma: [https://www.figma.com/make/uKnNGphSxSwzFyJQZHyLsH/Bilingual-Data-Analyst-Portfolio?t=NrdMsXAX7zFyxmED-1)
 - 🌐 Sitio publicado: [Enlace a GitHub Pages](#)
