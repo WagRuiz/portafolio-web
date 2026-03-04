@@ -1,0 +1,352 @@
+/* ===== VARIABLES ===== */
+:root {
+    --azul-oscuro: #1E3A5F;
+    --azul-medio: #2E86C1;
+    --azul-claro: #3498DB;
+    --blanco: #FFFFFF;
+    --gris-oscuro: #2C3E50;
+    --gris-claro: #7F8C8D;
+    --fondo-claro: #F4F8FB;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--gris-oscuro);
+    background-color: var(--blanco);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--azul-oscuro);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: var(--blanco);
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--azul-claro);
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-medio) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 30px 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-saludo {
+    color: var(--azul-claro);
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-nombre {
+    color: var(--blanco);
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-titulo {
+    color: var(--azul-claro);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-descripcion {
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background-color: var(--azul-claro);
+    color: var(--blanco);
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--azul-medio);
+    transform: translateY(-3px);
+}
+
+/* ===== CONTENEDOR GENERAL ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--azul-oscuro);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--azul-claro);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== SOBRE MÍ ===== */
+.sobre-mi {
+    padding: 100px 0;
+    background-color: var(--fondo-claro);
+}
+
+.sobre-mi-texto p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gris-oscuro);
+    margin-bottom: 20px;
+}
+
+.sobre-mi-info {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    font-size: 14px;
+}
+
+/* ===== HABILIDADES ===== */
+.habilidades {
+    padding: 100px 0;
+    background-color: var(--blanco);
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.habilidad-card {
+    background-color: var(--fondo-claro);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--azul-claro);
+}
+
+.habilidad-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(30, 58, 95, 0.15);
+}
+
+.habilidad-icono {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.habilidad-card h3 {
+    color: var(--azul-oscuro);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.habilidad-card p {
+    color: var(--gris-claro);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.barra-container {
+    background-color: #D6E8F7;
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.barra {
+    height: 100%;
+    background: linear-gradient(90deg, var(--azul-medio), var(--azul-claro));
+    border-radius: 10px;
+}
+
+/* ===== CONTACTO ===== */
+.contacto {
+    padding: 100px 0;
+    background-color: var(--fondo-claro);
+}
+
+.contacto-descripcion {
+    text-align: center;
+    font-size: 16px;
+    color: var(--gris-claro);
+    margin-bottom: 50px;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.contacto-item {
+    background-color: var(--blanco);
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.contacto-item:hover {
+    transform: translateY(-5px);
+}
+
+.contacto-icono {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.contacto-item h3 {
+    color: var(--azul-oscuro);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contacto-item a {
+    color: var(--azul-claro);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.contacto-item a:hover {
+    color: var(--azul-oscuro);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--azul-oscuro);
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-nombre {
+        font-size: 32px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-mi-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-nombre {
+        font-size: 26px;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}
